@@ -1,0 +1,36 @@
+html {
+	background-color: #F4A460; /* Ajout d'une couleur d'arrière-plan */
+	font-size: 14px; /* Taille de la police paramétrée à 14 pixels */
+	max-width: 100%; /* Largeur maximale paramétrée à 100% */
+}
+
+h1 {
+	font-size: 2em; /* Police du titre 1 deux fois plus grande que celle du reste de la page */
+}
+
+h2 {
+	font-size: 1.5em; /* Police du titre 2 une fois et demie plus grande que celle du reste de la page */
+}
+
+#page {
+	width: 80%; /* Largeur de la div page paramétrée à 80% */
+	margin: auto; /* Centrage de la div page */
+	background-color: #FFF5EE; /* Ajout d'une couleur d'arrère-plan pour la div page */
+	border: 4px solid black; /* Ajout d'une bordure noire de 4 pixels d'épaisseur */
+}
+
+#entete {
+	text-align: center; /* Centrage du texte de la div entete */
+}
+
+#aboutme {
+	padding-left: 20px; /* Ajout d'un écart de 20 pixels entre le bord gauche du cadre et le texte */
+
+}
+
+footer {
+	width: 100%; /* Largeur de l'élément footer paramétrée à 100% */
+	background-color: #E6E6FA; /* Ajout d'une couleur pour l'élément footer */
+	border: 2px solid black; /* Ajout d'une bordure noire de 2 pixels d'épaisseur */
+	text-align: center; /* Centrage du texte de l'élément footer */
+}
