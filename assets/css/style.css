@@ -28,6 +28,10 @@ h2 {
 
 }
 
+#devoir {
+	padding-left: 20px; /* Ajout d'un écart de 20 pixels entre le bord gauche du cadre et le texte */
+}
+
 footer {
 	width: 100%; /* Largeur de l'élément footer paramétrée à 100% */
 	background-color: #E6E6FA; /* Ajout d'une couleur pour l'élément footer */
