@@ -35,17 +35,22 @@ window.onload = function() {
     });
 }
 
-function MaFonction() {
+// tâche 1
+function segmentation() {
     // Récupération du texte
-    let texte = document.getElementById('fileInput');
+    texte = reader.result;
 
     // Récupération de la zone de texte pour l'affichage des résultats
     let resultat = document.getElementById('page-analysis');
 
+    // Récupération des délimiteurs
+    let delimiteurs = document.getElementById('delimID');
+
     // Segmentation du texte selon les délimiteurs
-    texte = texte.replace(/,;’~|&#@=`-\.?!%*$()[]{}_:+«»§\//g,'');
-    texte = texte.replace(/'/g,"' ");
-    let mots = texte.split(' ');
+    let del = RegExp(delimiteurs, 'g');
+    textedel = texte.replace(del,'');
+    textedel = textedel.replace(/'/g,"' ");
+    let mots = textedel.split(' ');
     let nbMots = mots.length;
 
     // On associe chaque mot à son nombre de caractères
@@ -55,8 +60,37 @@ function MaFonction() {
     })
 
     // On compte le nombre d'occurences pour chaque longueur de mot
+    // On regroupe les mots selon leur longueur
+    let groupesLongueur = {};
+
+    mots.forEach(function(mot) {
+        let longueur = mot.length;
+
+        if (!groupesLongueur[longueur]) {
+            groupesLongueur[longueur] = [];
+        }
+
+        groupesLongueur[longueur].push(mot);
+    });
+
+    return groupesLongueur;
+
     // On enlève les doublons
     // On affiche les résultats dans un tableau
 
     resultat.innerHTML=`<p style="text-align:left;"> Le texte contient ${nbMots} mots.</p><br/>`
+}
+
+// tâche 2
+// Fonction tokénisation
+function tokenisation() {
+    let del = RegExp(delimiteurs, 'g');
+    textedel = texte.replace(del,'');
+    textedel = textedel.replace(/'/g,"' ");
+    let mots = textedel.split(' ');
+}   
+
+// Cooccurrence
+function cooccurrence() {
+
 }
