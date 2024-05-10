@@ -7,6 +7,8 @@
     <title>Lecture des données dans un fichier...</title>
     <script type="text/javascript" language="javascript" src="../js/code.js"></script>
     <link rel="stylesheet" href="../css/monstyle.css" />
+    <script type="text/javascript" src="assets/js/chartist.min.js"></script> 
+        <link rel="stylesheet" href="assets/css/chartist.min.css">
 </head>
 
 <body>
@@ -43,16 +45,12 @@
                     </small>
                     <br />
                     <br />
-                    <button onclick="alert('bonjour');"><span>Bonjour</span></button>
+                    <button onclick="alert('Bienvenue sur la page du projet !');"><span>Bonjour</span></button>
                     <br />
                     <br />
-                    <button class="submit" onclick="segmentation();"><span>Segmentation</span></button>
+                    <button class="submit" onclick="sort_words();"><span>Segmentation</span></button>
+                    <button class="submit" onclick="pie_chars();"><span>Camembert - Nombre de caractères</span></ >
                     <button class="submit" onclick="cooccurrence();"><span>Cooccurrents/fréquence</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
                 </p>
             </div>
             <div id="logger" style="width:100%"></div>
